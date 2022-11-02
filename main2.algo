@@ -1,0 +1,20 @@
+ALGORITHM SOMME_EGAUX
+VAR
+ set1 : ARRAY_OF INTEGER[];
+ set2 : ARRAY_OF INTEGER[];
+ i : INTEGER;
+ j: INTEGER ; 
+ sum_e : INTEGER:=0; 
+BEGIN
+ set1 := {1,3,7,9};
+ set2 := {2, 4, 1, 9, 3}
+ FOR  i FROM 0 TO set1.length-1 STEP 1  DO
+ FOR j FROM 0 TO set2.length-1 STEP 1 DO 
+ IF (set1[i] == set2[j]) THEN  
+ sum_e=sum_e + (set1[i]*2);
+ END IF
+ END FOR
+ END FOR
+  write("Print Array :", sum_e);
+
+END
